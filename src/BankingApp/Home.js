@@ -14,10 +14,10 @@ const Home = () => {
         columnWrapperStyle={{ justifyContent: 'space-evenly' }}
         renderItem={({ item }) => <Item data={item} />}
         keyExtractor={(item, index) => index}
-        ListFooterComponent={()=>(
-         <View style={{marginBottom:12,borderWidth:1,borderColor:'#0C1A30', height:50, justifyContent:'center', alignItems:'center', borderRadius:7, marginHorizontal:12}}>
-          <Text style={{color:'#0C1A30', fontFamily:Poppins[400]}}>Filter & Sorting</Text>
-         </View>
+        ListFooterComponent={() => (
+          <View style={{ marginBottom: 12, borderWidth: 1, borderColor: '#0C1A30', height: 50, justifyContent: 'center', alignItems: 'center', borderRadius: 7, marginHorizontal: 12 }}>
+            <Text style={{ color: '#0C1A30', fontFamily: Poppins[400] }}>Filter & Sorting</Text>
+          </View>
         )}
       />
     </View>
@@ -53,10 +53,10 @@ const Item = ({ data }) => {
         <Text style={{ fontFamily: Poppins[700], fontSize: 14, color: '#FE3A30', marginTop: 10 }}>{data.price}</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 2, }}>
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-            <Image style={{ width: 14, height:14, marginRight: 2, backgroundColor:'grey' }} source={require('../asm/assets/trash/star.png')} />
-            <Text style={{ fontFamily: Poppins[400], height: '100%', backgroundColor:'violet', textAlignVertical: 'center', fontSize: 12,  marginEnd: 8 }}>{data.oldprice}</Text>
+            <Image style={{ width: 14, height: 14, marginRight: 2, backgroundColor: 'grey' }} source={require('../asm/assets/trash/star.png')} />
+            <Text style={{ fontFamily: Poppins[400], height: '100%', backgroundColor: 'violet', textAlignVertical: 'center', fontSize: 12, marginEnd: 8 }}>{data.oldprice}</Text>
             <Text style={{ fontFamily: Poppins[400], height: '100%', textAlignVertical: 'center', fontSize: 12 }}>{data.safeoff}</Text>
-            
+
           </View>
           <Image source={require('../asm/assets/trash/more-verti.png')} />
         </View>
